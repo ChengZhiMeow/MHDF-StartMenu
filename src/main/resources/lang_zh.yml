@@ -1,0 +1,36 @@
+config_version: "${version}"
+
+prefix: "&8[<#CFC2FF>梦之开始菜单&8]"
+player_offline: "{prefix} <#FFB8B8>你指定的玩家并没有在线!"
+no_permission: "{prefix} <#FFB8B8>你没有权限怎么做"
+usage_error: "{prefix} <#FFB8B8>用法错误,正确用法: &f{usage}"
+only_player: "{prefix} <#FFB8B8>这个命令只能玩家执行!"
+command_info_format: "  &f{usage} &8 - &7{description}"
+
+commands:
+  mhdfstartmenu:
+    usage: "/{command} <参数>"
+    description: "主命令"
+    sub_commands:
+      help:
+        usage: "/{command} help"
+        description: "命令帮助"
+        message: |-
+          &f
+          &7⌜       <#FF359F>MHDF-StartMenu &f{version} - <#CFC2FF>梦之开始菜单 &7      ⌝
+          &f
+          {helpList}
+          &f
+          &7⌞                                                 ⌟
+      join:
+        usage: "/{command} join [玩家ID]"
+        description: "进入开始菜单"
+        message: "{prefix} <#EAE4FF>执行成功!"
+      quit:
+        usage: "/{command} quit [玩家ID]"
+        description: "退出开始菜单"
+        message: "{prefix} <#EAE4FF>执行成功!"
+      reload:
+        usage: "/{command} reload"
+        description: "重载插件"
+        message: "{prefix} <#EAE4FF>插件重载完成!"

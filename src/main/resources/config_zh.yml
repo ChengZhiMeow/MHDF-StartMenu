@@ -1,0 +1,98 @@
+# 配置文件版本
+config_version: "1.0.0"
+
+# 调试模式
+debug: false
+
+# 返回进入前的位置
+back_location: true
+
+# 进服自动进入界面
+auto_join: true
+
+# 摄像机位置
+location:
+  world: "world"
+  x: 0.0
+  y: 265.0
+  z: 0.0
+  yaw: 180.0
+  pitch: 0.0
+
+# 悬浮字位置
+hologram:
+  # 悬浮字ID
+  start_game:
+    # 可点击范围
+    range:
+      from:
+        x: -15.2
+        y: 263.4
+      to:
+        x: -10.2
+        y: 263.8
+    # 常规状态时的FD悬浮字ID
+    normal: "start_game"
+    # 鼠标放置在悬浮字上时的FD悬浮字ID
+    hover: "start_game_hover"
+    # 点击操作
+    action:
+      - actions:
+          - # 类型
+            # sell                出售物品
+            # connect_server      跨服(*server)
+            # player_command      玩家身份执行命令(*command, op[false], chat[false])
+            # console_command     后台身份执行命令(*command)
+            # title               发送标题消息(title[""], subtitle[""], in[20], step[70], out[10])
+            # message             发送消息(*message)
+            # broadcast           发送全体消息(*message)
+            # action_bar          发送操作栏消息(*message)
+            # boss_bar            发送BOSS血条(*title, color[YELLOW], style[PROGRESS], current[100], *delay[100])
+            # play_sound          发送音效(*sound, volume[1.0], pitch[1.0])
+            # close_inventory     关闭菜单
+            # quit                离开画面
+            type: "message"
+            message: "&e杂鱼大哥哥还想进来呢, 不给噢~"
+          - type: "play_sound"
+            sound: "ui.button.click"
+          - type: "quit"
+      - conditions:
+          - # 类型
+            # contains_value 列表包含值(*list、*value)
+            # < 小于(*value1、*value2)
+            # <= 小于等于(*value1、*value2)
+            # == 等于(*value1、*value2)
+            # >= 大于等于(*value1、*value2)
+            # > 大于(*value1、*value2)
+            # permission 权限(*permission）
+            # contains 字符串包含(*string、*value)
+            # equals 字符串匹配(*string、*value)
+            # && 条件与(*conditionss)
+            # || 条件或(*conditionss)
+            type: "permission"
+            permission: "op"
+        actions:
+          - type: "message"
+            message: "&e欸欸欸, 是欧尼酱啊, 真拿你没办法, 那...那.就这一次, 可..可以吧!"
+
+# 鼠标指针设置
+mouse_icon:
+  # 基础位置设置
+  location:
+    x: 0.0
+    y: 265.0
+    z: -8.0
+    yaw: 0.0
+    pitch: 0.0
+  # 物品设置
+  item:
+    # 来自
+    # Vanilla
+    # CraftEngine
+    # MythicMobs
+    # ItemAdder
+    # Oraxen
+    # Nexo
+    by: "Vanilla"
+    # 类型
+    type: "arrow"

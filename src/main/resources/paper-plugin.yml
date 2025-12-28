@@ -1,0 +1,46 @@
+name: MHDF-StartMenu
+version: '${version}'
+loader: cn.chengzhimeow.mhdfstartmenu.PluginLoader
+main: cn.chengzhimeow.mhdfstartmenu.Main
+folia-supported: true
+api-version: '1.21'
+authors:
+  - ChengZhiMeow
+permissions:
+  mhdfstartmenu.commands.mhdfstartmenu:
+    description: 主命令权限
+    default: op
+dependencies:
+  server:
+    PlaceholderAPI:
+      load: BEFORE
+      required: false
+      join-classpath: true
+    packetevents:
+      load: BEFORE
+      required: true
+      join-classpath: true
+    FancyHolograms:
+      load: BEFORE
+      required: true
+      join-classpath: true
+    CraftEngine:
+      load: BEFORE
+      required: false
+      join-classpath: true
+    MythicMobs:
+      load: BEFORE
+      required: false
+      join-classpath: true
+    ItemsAdder:
+      load: BEFORE
+      required: false
+      join-classpath: true
+    Oraxen:
+      load: BEFORE
+      required: false
+      join-classpath: true
+    Nexo:
+      load: BEFORE
+      required: false
+      join-classpath: true
