@@ -56,8 +56,8 @@ tasks {
         exclude("META-INF/")
 
         archiveFileName.set("[梦之开始菜单]${project.name}-${project.version}.jar")
-//        destinationDirectory.set(file("$rootDir/target"))
-        destinationDirectory.set(file("C:\\Users\\ChengZhiYa\\Desktop\\momi\\plugins"))
+        destinationDirectory.set(file("$rootDir/target"))
+//        destinationDirectory.set(file("C:\\Users\\ChengZhiYa\\Desktop\\momi\\plugins"))
     }
 
     // 调试测试
